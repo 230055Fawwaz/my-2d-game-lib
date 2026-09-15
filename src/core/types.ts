@@ -10,7 +10,7 @@
 // ==========================================
 
 
-import type { IVector2 } from "./Vector2";
+import type { IVector2 } from "./Vector2.js";
 
 
 // Re-export IVector2 agar terpusat dari types.ts
@@ -29,7 +29,7 @@ export interface ReadonlyVector2 {
  */
 export interface ISize2D {
     width: number;
-    length: number;
+    height: number;
 }
 
 /**
