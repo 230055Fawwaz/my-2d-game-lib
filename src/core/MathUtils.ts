@@ -3,15 +3,21 @@
 // Deskripsi File:     Bantuan matematika
 // Penulis File:       Fawwaz Yaqzhan & Google Antigravity
 // Tanggal Pembuatan:  15-09-2026
-// Tanggal Pembaruan:  15-09-2026
+// Tanggal Pembaruan:  16-09-2026
 // Catatan:
-//   - Nilai dasar
+//   - Berisi nilai-nilai dasar matematika yang konstan
 //   - Perhitungan matematika dasar
+//   - Derajat digunakan manusia, satu lingkaran adalah 360 derajat
+//   - Radian digunakan komputer, satu lingkaran adalah 2 PI radian
+//   - Interpolasi linear digunakan untuk mencari nilai di antara dua titik dalam garis lurus
+//   - Interpolasi hermite digunakan untuk menghasilkan kurva yang mulus untuk pergerakan benda
 // ==========================================
 
 
 /**
  * Standar toleransi bagi nilai float (bilangan desimal)
+ * Toleransi digunakan agar saat membandingkan nilai float, tidak error
+ * Nilai float dapat error saat dibandingkan karena hitungan tidak sempurna
  * Nilai ini bernama epsilon
  */
 export const EPSILON = 1e-6;
