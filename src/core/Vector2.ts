@@ -11,6 +11,7 @@
 //   - 2D cross product (perp-dot) adalah perkalian silang yang menghasilkan skalar untuk menentukan orientasi arah putar / belokan
 //   - Sudut bertanda adalah sudut dengan tanda + dan - untuk menentukan arah putar
 //   - Interpolasi linear digunakan untuk mencari nilai di antara dua titik dalam garis lurus
+//   - Bagi komputer, titik pusat (0, 0) berada di kiri atas bukan kiri bawah
 // ==========================================
 
 
@@ -43,32 +44,38 @@ export class Vector2 implements IVector2 {
 
   // --- Nilai konstan dan Factory statis ---
 
-  /** Mengembalikan Vector2(0, 0) yang baru */
+  /** Mengembalikan Vector2(0, 0) yang baru (titik pusat) */
   static zero(): Vector2 {
     return new Vector2(0, 0);
   }
 
-  /** Mengembalikan Vector2(1, 1) yang baru */
+  /** Mengembalikan Vector2(1, 1) yang baru (diagonal atas-kanan) */
   static one(): Vector2 {
     return new Vector2(1, 1);
   }
 
-  /** Mengembalikan Vector2(0, 1) standar Cartesian up */
+  /** 
+   * Mengembalikan Vector2(0, -1) dengan arah menunjuk ke atas 
+   * (Y berkurang ke atas pada sistem layar) 
+   */
   static up(): Vector2 {
-    return new Vector2(0, 1);
-  }
-
-  /** Mengembalikan Vector2(0, -1) standar Cartesian down */
-  static down(): Vector2 {
     return new Vector2(0, -1);
   }
 
-  /** Mengembalikan Vector2(-1, 0) standar kiri */
+  /** 
+   * Mengembalikan Vector2(0, 1) dengan arah menunjuk ke bawah 
+   * (Y bertambah ke bawah pada sistem layar)
+   */
+  static down(): Vector2 {
+    return new Vector2(0, 1);
+  }
+
+  /** Mengembalikan Vector2(-1, 0) dengan arah menunjuk ke kiri */
   static left(): Vector2 {
     return new Vector2(-1, 0);
   }
 
-  /** Mengembalikan Vector2(1, 0) standar kanan */
+  /** Mengembalikan Vector2(1, 0) dengan arah menunjuk ke kanan */
   static right(): Vector2 {
     return new Vector2(1, 0);
   }
