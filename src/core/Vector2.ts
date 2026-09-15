@@ -1,6 +1,6 @@
 // ==========================================
 // Nama File:          Vector2.ts
-// Deskripsi File:     Library Vector2
+// Deskripsi File:     Modul Vector2
 // Penulis File:       Fawwaz Yaqzhan & Google Antigravity
 // Tanggal Pembuatan:  15-09-2026
 // Tanggal Pembaruan:  16-09-2026

@@ -11,3 +11,4 @@
 
 export * from "./MathUtils.js";
 export * from "./Vector2.js";
+export * from "./types.js";
