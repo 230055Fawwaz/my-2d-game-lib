@@ -37,7 +37,7 @@ export interface ISize2D {
  */
 export interface ReadonlySize2D {
     readonly width: number;
-    readonly length: number;
+    readonly height: number;
 }
 
 /**
