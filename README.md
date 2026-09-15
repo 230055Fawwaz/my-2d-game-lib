@@ -1,2 +1,2 @@
 # my-2d-game-lib
-My 2D game library consist of math logics in the form of algorithm and data structures
+My 2D Game Library berisi logika matematika untuk game 2 dimensi dalam bentuk algoritma dan struktur data.
