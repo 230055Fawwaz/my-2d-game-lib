@@ -16,3 +16,4 @@ export * from "./Transform2D.js";
 export * from "./Pool.js";
 export * from "./PRNG.js";
 export * from "./Easing.js";
+export * from "./Color.js";
