@@ -3,7 +3,7 @@
 // Deskripsi File:     Entry point bagi core
 // Penulis File:       Fawwaz Yaqzhan & Google Antigravity
 // Tanggal Pembuatan:  15-09-2026
-// Tanggal Pembaruan:  16-09-2026
+// Tanggal Pembaruan:  17-09-2026
 // Catatan:
 //   - Ekspor logika, algoritma dan struktur data core
 // ==========================================
@@ -15,3 +15,4 @@ export * from "./types.js";
 export * from "./Transform2D.js";
 export * from "./Pool.js";
 export * from "./PRNG.js";
+export * from "./Easing.js";
