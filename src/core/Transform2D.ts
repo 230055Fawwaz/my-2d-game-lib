@@ -150,7 +150,7 @@ export class Transform2D implements ITransform2D {
         const cos = Math.cos(this.rotation);
         const sin = Math.sin(this.rotation);
         const rx = sx * cos - sy * sin;
-        const ry = sx * sin - sy * cos;
+        const ry = sx * sin + sy * cos;
 
         // Translasi (posisi)
         target.x = rx + this.position.x;
@@ -170,14 +170,14 @@ export class Transform2D implements ITransform2D {
         const target = out ?? new Vector2();
 
         // Kebalikan translasi
-        const dx = world.x * this.position.x;
-        const dy = world.y * this.position.y;
+        const dx = world.x - this.position.x;
+        const dy = world.y - this.position.y;
 
         // Kebalikan rotasi
         const cos = Math.cos(this.rotation);
         const sin = Math.sin(this.rotation);
-        const rx = dx * cos - dy * sin;
-        const ry = -dx * sin - dy * cos;
+        const rx = dx * cos + dy * sin;
+        const ry = -dx * sin + dy * cos;
 
         // Kebalikan skala
         target.x = this.scale.x !== 0 ? rx / this.scale.x : 0;
@@ -202,7 +202,7 @@ export class Transform2D implements ITransform2D {
         const sin = Math.sin(this.rotation);
 
         target.x = sx * cos - sy * sin;
-        target.y = sx * cos + sy * sin;
+        target.y = sx * sin + sy * cos;
 
         return target;
     }
