@@ -71,7 +71,7 @@ export class Circle {
      * Menyalin nilai dari lingkaran lain ke lingkaran ini
      */
     public copyFrom(other: Circle): this {
-        this.center.copyFrom(other.center);
+        this.center.copy(other.center);
         this.radius = other.radius;
         return this;
     }
