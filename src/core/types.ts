@@ -53,7 +53,7 @@ export interface ITransform2D {
 }
 
 /**
- * Interface untuk objak yang dapat dimasukkan ke dalam pool objek
+ * Interface untuk objek yang dapat dimasukkan ke dalam pool objek
  * Menyediakan method reset() untuk membersihkan state sebelum digunakan kembali
  */
 export interface IPoolable {
