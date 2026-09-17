@@ -11,3 +11,4 @@
 
 export * from "./Circle.js";
 export * from "./AABB.js";
+export * from "./LineSegment.js";
