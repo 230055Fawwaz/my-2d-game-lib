@@ -152,8 +152,8 @@ export class Circle {
      * Memeriksa apakah lingkaran ini tumpang tindih dengan lingkaran lain
      */
     public overlaps(other: Circle): boolean {
-        const dx = other.x - this.center.x;
-        const dy = other.y - this.center.y;
+        const dx = other.center.x - this.center.x;
+        const dy = other.center.y - this.center.y;
         const distSq = dx * dx + dy * dy;
         const radiusSum = this.radius + other.radius;
 
