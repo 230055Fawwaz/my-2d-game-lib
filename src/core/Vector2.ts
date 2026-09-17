@@ -263,7 +263,7 @@ export class Vector2 implements IVector2 {
 
   /** Mengembalikan vektor negasi (-x, -y) */
   negate(): Vector2 {
-    return new Vector2(-this.x || 0, -this.y || 0);
+    return new Vector2(-this.x, -this.y);
   }
 
   /** Negasikan vektor ini in-place */
@@ -340,15 +340,15 @@ export class Vector2 implements IVector2 {
    * Mengembalikan vektor yang tegak lurus (perpendicular) terhadap vektor ini (-y, x).
    */
   perpendicular(): Vector2 {
-    return new Vector2(-this.y || 0, this.x || 0);
+    return new Vector2(-this.y, this.x);
   }
 
   /**
    * Mengubah vektor ini menjadi tegak lurus (perpendicular) (-y, x) secara in-place.
    */
   perpendicularMut(): this {
-    const temp = this.x || 0;
-    this.x = -this.y || 0;
+    const temp = this.x;
+    this.x = -this.y;
     this.y = temp;
     return this;
   }

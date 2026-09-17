@@ -51,10 +51,7 @@ export class PRNG {
      * @returns Nilai desimal [0, 1)
      */
     next(): number {
-        let t = (this._seed += 0x6d2b79f5);
-        t = Math.imul(t ^ (t >>> 15), t | 1);
-        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+        return this.nextInt() / 4294967296;
     }
 
     /**
@@ -97,7 +94,7 @@ export class PRNG {
      * @param chance Probabilitas nilai true (0.0 sampai 1.0, default: 0.5)
      * @returns True jika beruntung
      */
-    Boolean(chance: number = 0.5): boolean {
+    boolean(chance: number = 0.5): boolean {
         return this.next() < chance;
     }
 
@@ -108,7 +105,7 @@ export class PRNG {
      * @returns Angka 1 atau -1
      */
     sign(chance: number = 0.5): number {
-        return this.Boolean(chance) ? 1 : -1;
+        return this.boolean(chance) ? 1 : -1;
     }
 
     /**

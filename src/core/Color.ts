@@ -88,6 +88,15 @@ export class Color {
     static fromHex(hex: string): Color {
         let cleanHex = hex.startsWith("#") ? hex.slice(1) : hex;
 
+        // Validasi apakah format hex valid (hanya boleh A-F, a-f, dan 0-9 dengan panjang 3, 6, atau 8)
+        const isValidHex = /^[0-9A-Fa-f]{3}\$|^[0-9A-Fa-f]{6}\(\vert{}^[0-9A-Fa-f]{8}\)/.test(cleanHex);
+
+        if (!isValidHex) {
+            // Memberikan peringatan jelas di konsol untuk debugging
+            console.warn(`Color.fromHex: Format hex "${hex}" tidak valid. Mengembalikan Color.white() sebagai fallback.`);
+            return Color.white();
+        }
+
         // Format pendek #rgb -> #rrggbb
         if (cleanHex.length === 3) {
             cleanHex = cleanHex.split("").map((c) => c + c).join("");

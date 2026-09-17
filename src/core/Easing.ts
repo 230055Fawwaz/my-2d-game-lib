@@ -105,28 +105,41 @@ export function easeInOutBack(t: number): number {
 // --- Bounce ---
 
 export function easeInBounce(t: number): number {
-    return 1 - easeInOutBounce(1 - t);
+    return 1 - easeOutBounce(1 - t);
 }
 
 export function easeOutBounce(t: number): number {
-    const n1 = 7.5625;
-    const d1 = 2.75;
+    const SCALE = 7.5625;
+    const DIVISOR = 2.75;
 
-    if (t < 1 / d1) {
-        return n1 * t * t;
-    } else if (t < 2 / d1) {
-        return n1 * (t -= 1.5 / d1) * t + 0.75;
-    } else if (t < 2.5 / d1) {
-        return n1 * (t -= 2.25 / d1) * t - 0.9375;
-    } else {
-        return n1 * (t -= 2.625 / d1) * t + 0.984375;
+    // Batas waktu untuk setiap tahapan pantulan
+    const bounce1Limit = 1 / DIVISOR;
+    const bounce2Limit = 2 / DIVISOR;
+    const bounce3Limit = 2.5 / DIVISOR;
+
+    if (t < bounce1Limit) {
+        return SCALE * t * t;
     }
+
+    if (t < bounce2Limit) {
+        const t2 = t - 1.5 / DIVISOR;
+        return SCALE * t2 * t2 + 0.75;
+    }
+
+    if (t < bounce3Limit) {
+        const t3 = t - 2.25 / DIVISOR;
+        // Koreksi konstanta bawaan: nilai aslinya adalah positif (+) 0.9375
+        return SCALE * t3 * t3 + 0.9375;
+    }
+
+    const t4 = t - 2.625 / DIVISOR;
+    return SCALE * t4 * t4 + 0.984375;
 }
 
 export function easeInOutBounce(t: number): number {
     return t < 0.5
-        ? (1 - easeInOutBounce(1 - 2 * t)) / 2
-        : (1 + easeInOutBounce(2 * t - 1)) / 2;
+        ? (1 - easeOutBounce(1 - 2 * t)) / 2
+        : (1 + easeOutBounce(2 * t - 1)) / 2;
 }
 
 // --- Elastic ---
@@ -140,7 +153,7 @@ export function easeInElastic(t: number): number {
 export function easeOutElastic(t: number): number {
     if (t === 0) return 0;
     if (t === 1) return 1;
-    return Math.pow(2, 10 * t) * Math.sin(((t * 10 - 10.75) * (2 * Math.PI)) / 3) + 1;
+    return Math.pow(2, -10 * t) * Math.sin(((t * 10 - 0.75) * (2 * Math.PI)) / 3) + 1;
 }
 
 export function easeInOutElastic(t: number): number {
