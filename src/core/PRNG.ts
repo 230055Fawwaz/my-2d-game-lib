@@ -55,7 +55,7 @@ export class PRNG {
     }
 
     /**
-     * Menghasilkan interger 32-bit unsigned
+     * Menghasilkan integer 32-bit unsigned
      * @returns Nilai integer unsigned
      */
     nextInt(): number {

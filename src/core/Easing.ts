@@ -80,7 +80,7 @@ export function easeInOutExpo(t: number): number {
     return t < 0.5 ? Math.pow(2, 20 * t - 10) / 2 : (2 - Math.pow(2, -20 * t + 10)) / 2;
 }
 
-// --- Back (Overshoot / Menarik ke balakang dahulu) ---
+// --- Back (Overshoot / Menarik ke belakang dahulu) ---
 
 export function easeInBack(t: number): number {
     const c1 = 1.70158;

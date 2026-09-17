@@ -27,7 +27,7 @@ export class Transform2D implements ITransform2D {
     /**
     * Membuat instance Transform2D baru
     * @param position Posisi objek (default = Vector2(0, 0))
-    * @param rotation Sudut rotasi dalam radian (deafult = 0)
+    * @param rotation Sudut rotasi dalam radian (default = 0)
     * @param scale Skala perbesaran objek (default = Vector2(1, 1))
     */
     constructor(

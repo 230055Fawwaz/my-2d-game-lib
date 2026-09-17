@@ -20,12 +20,12 @@ import type { IPoolable } from "./types.js";
 export interface PoolOption<T> {
     /**Kapasitas maksimum objek yang ditampung dalam pool (mencegah memory leak) */
     maxCapacity?: number;
-    /**Fungsi pembersih manual (opsional, jika objek bukan implemnetasi IPoolable) */
+    /**Fungsi pembersih manual (opsional, jika objek bukan implementasi IPoolable) */
     resetFn?: (item: T) => void;
 }
 
 /**
- * Class generic penyedi objek pool untuk mendaur ulang objek
+ * Class generic penyedia objek pool untuk mendaur ulang objek
  */
 export class Pool<T> {
     private readonly items: T[] = [];
@@ -119,7 +119,7 @@ export class Pool<T> {
     }
 
     /**
-     * Type guard untuk mengecek apakah obejk memiliki method reset()
+     * Type guard untuk mengecek apakah objek memiliki method reset()
      */
     private isPoolable(obj: unknown): obj is IPoolable {
         return (
