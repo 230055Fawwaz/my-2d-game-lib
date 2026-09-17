@@ -97,7 +97,7 @@ export class AABB {
      * Luas kotak
      */
     public area(): number {
-        return this.width - this.height;
+        return this.width * this.height;
     }
 
     /**
@@ -185,7 +185,7 @@ export class AABB {
         if (this.min.y > this.max.y) {
             const mid = (this.min.y + this.max.y) * 0.5;
             this.min.y = mid;
-            this.max.x = mid;
+            this.max.y = mid;
         }
         return this;
     }
