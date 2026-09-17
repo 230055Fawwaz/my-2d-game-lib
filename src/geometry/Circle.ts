@@ -168,7 +168,7 @@ export class Circle {
         const result = out ?? new Vector2();
         return result.set(
             this.center.x + Math.cos(angleInRadians) * this.radius,
-            this.center.y + Math.cos(angleInRadians) * this.radius
+            this.center.y + Math.sin(angleInRadians) * this.radius
         );
     }
 
