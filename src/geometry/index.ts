@@ -1,13 +1,13 @@
 // ==========================================
 // Nama File:          index.ts
-// Deskripsi File:     Entry point bagi library
+// Deskripsi File:     Entry point bagi geometry
 // Penulis File:       Fawwaz Yaqzhan & Google Antigravity
 // Tanggal Pembuatan:  15-09-2026
-// Tanggal Pembaruan:  15-09-2026
+// Tanggal Pembaruan:  17-09-2026
 // Catatan:
-//   - Ekspor isi library keluar
+//   - Ekspor logika, algoritma dan struktur data geometry
 // ==========================================
 
 
-export * from "./core/index.js";
-export * from "./geometry/index.js";
+export * from "./Circle.js";
+export * from "./AABB.js";
