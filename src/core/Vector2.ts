@@ -16,16 +16,7 @@
 
 
 import { approxEqual, EPSILON, lerp } from "./MathUtils.js";
-
-
-/**
- * Interface merepresentasikan objek apapun dalam koordinat 2 dimensi (x dan y)
- * Memungkinkan interoperabilitas dengan object mentah seperti { x: 10, y: 20 }
- */
-export interface IVector2 {
-  x: number;
-  y: number;
-}
+import { IVector2 } from "./types.js";
 
 /**
  * Class vector 2D dengan operasi aljabar linear komprehensif

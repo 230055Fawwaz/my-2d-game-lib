@@ -10,11 +10,14 @@
 // ==========================================
 
 
-import type { IVector2 } from "./Vector2.js";
-
-
-// Re-export IVector2 agar terpusat dari types.ts
-export type { IVector2 };
+/**
+ * Interface merepresentasikan objek apapun dalam koordinat 2 dimensi (x dan y)
+ * Memungkinkan interoperabilitas dengan object mentah seperti { x: 10, y: 20 }
+ */
+export interface IVector2 {
+  x: number;
+  y: number;
+}
 
 /**
  * Interface untuk vektor2 read-only
