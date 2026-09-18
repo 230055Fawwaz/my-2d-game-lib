@@ -12,4 +12,5 @@
 export * from "./types.js";
 export * from "./Intersects.js";
 export * from "./Narrowphase.js";
+export * from "./Raycast.js";
 
