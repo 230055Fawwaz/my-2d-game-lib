@@ -11,3 +11,4 @@
 
 export * from "./core/index.js";
 export * from "./geometry/index.js";
+export * from "./collision/index.js";
