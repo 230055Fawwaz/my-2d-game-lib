@@ -12,3 +12,4 @@
 export * from "./Circle.js";
 export * from "./AABB.js";
 export * from "./LineSegment.js";
+export * from "./Ray2D.js";
