@@ -12,4 +12,5 @@
 export * from "./types.js";
 export * from "./Grid2D.js";
 export * from "./GridCoordTransform.js";
+export * from "./Bresenham.js";
 
