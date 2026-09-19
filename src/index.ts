@@ -12,3 +12,5 @@
 export * from "./core/index.js";
 export * from "./geometry/index.js";
 export * from "./collision/index.js";
+export * from "./spatial/index.js";
+export * from "./grid/index.js";
