@@ -1,6 +1,9 @@
 {
   "name": "my-2d-game-lib",
   "version": "0.1.0",
+  "files": [
+    "dist"
+  ],
   "description": "2D game math, physics geometry, and spatial data structures library in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

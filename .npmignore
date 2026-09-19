@@ -1,0 +1,37 @@
+# Source code TypeScript (hanya publish hasil build di dist/)
+src/
+
+# Testing & Coverage
+tests/
+__tests__/
+vitest.config.ts
+vitest.config.js
+coverage/
+
+# Konfigurasi Build & Tooling
+tsconfig.json
+tsconfig.*.json
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Git & CI/CD
+.git/
+.github/
+.gitignore
+
+# Logs & Debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment & Temp files
+.env
+.env.*
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
