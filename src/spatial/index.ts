@@ -11,4 +11,4 @@
 
 export * from "./types.js";
 export * from "./SpatialHash.js";
-
+export * from "./Quadtree.js";
