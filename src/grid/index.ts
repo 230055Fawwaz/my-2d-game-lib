@@ -14,4 +14,4 @@ export * from "./Grid2D.js";
 export * from "./GridCoordTransform.js";
 export * from "./Bresenham.js";
 export * from "./AStar.js";
-
+export * from "./FlowField.js";
