@@ -115,7 +115,7 @@ export function smoothStep(min: number, max: number, val: number): number {
 }
 
 /**
- * Objek kumpulan fungsi easing untuk memudahkan pemanggilan dinamis
+ * Objek kumpulan fungsi mathutils untuk memudahkan pemanggilan dinamis
  */
 export const MathUtils = {
   EPSILON,
