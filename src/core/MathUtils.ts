@@ -113,3 +113,19 @@ export function smoothStep(min: number, max: number, val: number): number {
   const x = clamp((val - min) / (max - min), 0, 1);
   return x * x * (3 - 2 * x);
 }
+
+/**
+ * Objek kumpulan fungsi easing untuk memudahkan pemanggilan dinamis
+ */
+export const MathUtils = {
+  EPSILON,
+  DEG_TO_RAD,
+  RAD_TO_DEG,
+  degToRad,
+  radToDeg,
+  clamp,
+  lerp,
+  approxEqual,
+  wrap,
+  smoothStep,
+} as const;
